@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KEA — Working Student AI / LLM in Berlin</title>
+<meta name="description" content="KEA is hiring a Working Student AI/LLM in Berlin. We build an AI-powered data intelligence platform that turns natural language into verified database queries.">
+<meta property="og:title" content="KEA — We're Hiring: Working Student AI / LLM">
+<meta property="og:description" content="A user asks a question. The database answers — reliably. We build what's in between. Join us in Berlin.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="KEA — Working Student AI / LLM in Berlin">
+<meta name="twitter:description" content="We build AI that talks to databases. Small team, close to launch, Berlin-based. Up to €25/h.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 42 42'><polygon points='21,3 38,36 4,36' fill='none' stroke='%23C8863E' stroke-width='2'/><circle cx='34' cy='9' r='3.5' fill='%23E8734A'/></svg>">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap');
+
+  :root {
+    --bg: #0C0D12;
+    --surface: #14151C;
+    --card: #1A1B24;
+    --border: #262733;
+    --bronze: #C8863E;
+    --bronze-hi: #E0A85C;
+    --flash: #E8734A;
+    --text: #DDDBD6;
+    --dim: #807E88;
+    --bright: #F5F4F1;
+    --accent-bg: rgba(200,134,62,0.07);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background: #08090C; color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  .page {
+    max-width: 720px; margin: 0 auto;
+    background: var(--bg); position: relative;
+    min-height: 100vh;
+  }
+  .page::before {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background:
+      radial-gradient(ellipse at 8% 5%, rgba(200,134,62,0.07) 0%, transparent 40%),
+      radial-gradient(ellipse at 92% 92%, rgba(232,115,74,0.04) 0%, transparent 40%);
+  }
+
+  .c {
+    position: relative; z-index: 1;
+    padding: 40px 48px 48px;
+    display: flex; flex-direction: column; gap: 0;
+  }
+
+  /* HEADER */
+  .hdr { display: flex; align-items: center; justify-content: space-between; margin-bottom: 32px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+  .logo { display: flex; align-items: center; gap: 12px; }
+  .logo svg { width: 36px; height: 36px; }
+  .logo-n { font-size: 24px; font-weight: 700; color: var(--bright); letter-spacing: 2.5px; }
+  .logo-s { font-size: 10px; color: var(--dim); letter-spacing: 0.3px; margin-top: 2px; }
+  .hdr-r { background: var(--accent-bg); border: 1px solid rgba(200,134,62,0.18); border-radius: 6px; padding: 8px 14px; text-align: right; }
+  .hdr-t { font-size: 10px; font-weight: 600; color: var(--bronze-hi); letter-spacing: 1.5px; text-transform: uppercase; }
+  .hdr-d { font-size: 10px; color: var(--dim); margin-top: 2px; }
+
+  /* HERO */
+  .hero { margin-bottom: 28px; }
+  .hero h1 {
+    font-family: 'Instrument Serif', serif; font-weight: 400;
+    font-size: 32px; color: var(--bright); line-height: 1.25; margin-bottom: 0;
+  }
+  .hero h1 em { font-style: italic; color: var(--bronze); }
+
+  /* DEMO BOX */
+  .demo {
+    background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+    padding: 20px 24px; margin-bottom: 24px;
+  }
+  .demo-ctx { font-size: 14px; color: var(--text); line-height: 1.7; margin-bottom: 12px; }
+  .demo-q {
+    font-family: 'JetBrains Mono', monospace; font-size: 14px;
+    color: var(--bronze-hi); margin-bottom: 12px; line-height: 1.5;
+  }
+  .demo-q::before { content: '> '; color: var(--dim); }
+  .demo-a { font-size: 13px; color: var(--dim); line-height: 1.7; }
+  .demo-a b { color: var(--text); font-weight: 500; }
+
+  /* BODY TEXT */
+  .intro { font-size: 14px; color: var(--dim); line-height: 1.75; margin-bottom: 28px; }
+  .intro b { color: var(--text); font-weight: 500; }
+
+  /* LABELS */
+  .lb { font-size: 10px; font-weight: 600; color: var(--bronze); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+
+  /* GRID */
+  .g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+  .cd { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 18px 20px; }
+  .cd p { font-size: 13px; color: var(--text); line-height: 1.65; }
+  .cd ul { list-style: none; padding: 0; }
+  .cd li { font-size: 13px; color: var(--text); line-height: 1.6; position: relative; padding-left: 16px; margin-bottom: 6px; }
+  .cd li::before { content: ''; position: absolute; left: 0; top: 8px; width: 5px; height: 5px; border-radius: 50%; background: var(--bronze); opacity: 0.6; }
+  .cd li span { color: var(--dim); font-size: 12px; }
+
+  /* STACK */
+  .stk { margin-bottom: 24px; }
+  .stk-sub { font-size: 11px; color: var(--dim); margin-bottom: 10px; font-style: italic; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .t { border-radius: 4px; padding: 6px 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1px; }
+  .t--core { background: var(--accent-bg); border: 1px solid rgba(200,134,62,0.3); color: var(--bronze-hi); }
+  .t--tech { background: var(--surface); border: 1px solid var(--border); color: var(--text); }
+  .t--concept { background: transparent; border: 1px solid var(--border); color: var(--dim); }
+
+  /* TERMS */
+  .terms { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 24px; }
+  .tm { text-align: center; padding: 14px 8px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; }
+  .tm-v { font-size: 17px; font-weight: 700; color: var(--bright); }
+  .tm-v.br { color: var(--bronze-hi); }
+  .tm-k { font-size: 9px; color: var(--dim); margin-top: 4px; letter-spacing: 0.4px; text-transform: uppercase; }
+
+  /* NOTE */
+  .note { font-size: 13px; color: var(--dim); line-height: 1.65; margin-bottom: 24px; font-style: italic; }
+  .note strong { color: var(--text); font-weight: 500; font-style: normal; }
+
+  .sep { height: 1px; background: var(--border); margin-bottom: 24px; }
+
+  /* CTA */
+  .cta {
+    background: linear-gradient(135deg, rgba(200,134,62,0.09), rgba(232,115,74,0.05));
+    border: 1px solid rgba(200,134,62,0.2); border-radius: 8px;
+    padding: 20px 24px; display: flex; align-items: center; justify-content: space-between;
+  }
+  .cta-t { font-size: 14px; color: var(--text); line-height: 1.6; }
+  .cta-t b { color: var(--bright); }
+  .cta-m { margin-top: 8px; }
+  .cta-m a {
+    font-family: 'JetBrains Mono', monospace; font-size: 13px;
+    color: var(--bronze-hi); text-decoration: none;
+    border-bottom: 1px solid rgba(224,168,92,0.3);
+    transition: border-color 0.2s;
+  }
+  .cta-m a:hover { border-color: var(--bronze-hi); }
+  .cta-r { flex-shrink: 0; margin-left: 24px; text-align: right; }
+  .cta-h { font-size: 13px; font-weight: 600; color: var(--bronze-hi); }
+  .cta-d { font-size: 11px; color: var(--dim); margin-top: 3px; }
+
+  /* FOOTER */
+  .ft { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; }
+  .ft p { font-size: 11px; color: var(--dim); }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .c { padding: 24px 20px 32px; }
+    .hero h1 { font-size: 24px; }
+    .g2 { grid-template-columns: 1fr; }
+    .terms { grid-template-columns: repeat(3, 1fr); }
+    .terms .tm:nth-child(4), .terms .tm:nth-child(5) { grid-column: span 1; }
+    .cta { flex-direction: column; align-items: flex-start; }
+    .cta-r { margin-left: 0; margin-top: 12px; text-align: left; }
+    .hdr { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .hdr-r { text-align: left; }
+    .demo-q { font-size: 12px; }
+  }
+
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div class="page"><div class="c">
+
+  <!-- HEADER -->
+  <div class="hdr">
+    <div class="logo">
+      <svg viewBox="0 0 42 42" fill="none"><polygon points="21,3 38,36 4,36" fill="none" stroke="#C8863E" stroke-width="2"/><polygon points="21,12 31,33 11,33" fill="rgba(200,134,62,0.12)" stroke="#C8863E" stroke-width="0.8" opacity="0.5"/><circle cx="34" cy="9" r="3.2" fill="#E8734A" opacity="0.85"/></svg>
+      <div><div class="logo-n">KEA</div><div class="logo-s">Knowledge Extraction Assistant</div></div>
+    </div>
+    <div class="hdr-r"><div class="hdr-t">Hiring Now</div><div class="hdr-d">Working Student AI / LLM · Berlin</div></div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>A user asks a question. The database <em>answers&nbsp;— reliably.</em><br>We build what's in between.</h1>
+  </div>
+
+  <!-- DEMO -->
+  <div class="demo">
+    <div class="demo-ctx">Think Spotify, but for enterprise data. Imagine a product manager at a streaming service wants to know:</div>
+    <div class="demo-q">"Do users under 25 listen to more podcasts or music on Monday mornings?"</div>
+    <div class="demo-a">The data exists — buried in hundreds of tables, millions of rows. Today, that question takes a data team and two days. With KEA, anyone just <b>types the question and gets the answer. In seconds.</b></div>
+  </div>
+
+  <!-- INTRO -->
+  <p class="intro">
+    KEA is an <b>AI-powered data intelligence platform</b>. Our first clients are in market research — but the technology is domain-agnostic: any structured database, any industry. We turn natural language into verified database queries across <b>fully isolated multi-tenant environments</b> — each with its own data model, glossary, and search index. Thousands to hundreds of thousands of variables per tenant, on-prem ready, zero data exposure, role-based access, full audit trails. Most NL-to-SQL tools choke on real enterprise data. <b>Ours doesn't — because we treat queries as pipelines, not prompts.</b> Small team in Berlin. Weeks from launch. Paying customers lined up.
+  </p>
+
+  <!-- ROLE / PHILOSOPHY -->
+  <div class="g2">
+    <div class="cd">
+      <div class="lb">What You'd Own</div>
+      <ul>
+        <li>Prompt engineering &amp; LLM orchestration at the core of the product</li>
+        <li>Retrieval logic — making search precise, not just fast</li>
+        <li>Early weeks: improve query accuracy, harden edge cases, ship a feature end-to-end</li>
+        <li>Architecture decisions — you're in the room, not outside it</li>
+        <li>Push models to their limits, find where they break, fix it</li>
+      </ul>
+    </div>
+    <div class="cd">
+      <div class="lb">How We Think</div>
+      <ul>
+        <li>Turn chaos into structure <span>— messy input in, clean pipeline out</span></li>
+        <li>Decompose everything into small, testable steps</li>
+        <li>Every decision traceable. Every output explainable.</li>
+        <li>Systems that self-correct and learn from failure</li>
+        <li>If it's not transparent, it doesn't ship.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- STACK -->
+  <div class="stk">
+    <div class="lb">Stack &amp; Tooling</div>
+    <div class="stk-sub">Production stack — individual components may evolve as we scale post-launch.</div>
+    <div class="tags">
+      <span class="t t--core">Python</span>
+      <span class="t t--core">TypeScript</span>
+      <span class="t t--core">LLM Orchestration</span>
+      <span class="t t--core">Prompt Engineering</span>
+      <span class="t t--tech">DuckDB</span>
+      <span class="t t--tech">Supabase</span>
+      <span class="t t--tech">n8n</span>
+      <span class="t t--tech">Embeddings</span>
+      <span class="t t--tech">BM25 + Semantic Hybrid Search</span>
+      <span class="t t--tech">Cross-Encoder Reranking</span>
+      <span class="t t--concept">NL-to-SQL</span>
+      <span class="t t--concept">RAG</span>
+      <span class="t t--concept">Intent Routing</span>
+      <span class="t t--concept">Self-Correcting Generation</span>
+      <span class="t t--concept">Multi-Tenant Isolation</span>
+      <span class="t t--concept">Role-Based Access</span>
+      <span class="t t--concept">AI-Assisted Dev</span>
+    </div>
+  </div>
+
+  <!-- YOU / US -->
+  <div class="g2">
+    <div class="cd">
+      <div class="lb">You</div>
+      <ul>
+        <li>Strong Python <span>— the entire backend runs on it</span></li>
+        <li>Obsessed with LLMs, retrieval, or making AI actually reliable</li>
+        <li>Have built and shipped something <span>— GitHub, prototypes, anything</span></li>
+        <li>Learn fast. Debug methodically. Take ownership.</li>
+        <li>SQL helps. Relentless curiosity is non-negotiable.</li>
+      </ul>
+    </div>
+    <div class="cd">
+      <div class="lb">Us</div>
+      <ul>
+        <li>Small team — no layers, no politics, no process theater</li>
+        <li>Biweekly architecture sessions, in person, with real decisions</li>
+        <li>We build with AI and review with humans <span>— speed + rigor</span></li>
+        <li>Best argument wins. Titles don't.</li>
+        <li>Full-time down the road? Open to it — no pressure either way</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sep"></div>
+
+  <!-- NOTE -->
+  <p class="note">
+    You don't need to check every box — but we're looking for someone who's <strong>genuinely strong, not just interested</strong>. Exceptional in one or two areas, fast learner everywhere else. One real project beats ten online courses.
+  </p>
+
+  <!-- TERMS -->
+  <div class="terms">
+    <div class="tm"><div class="tm-v">Berlin</div><div class="tm-k">Based here, not remote</div></div>
+    <div class="tm"><div class="tm-v">12–20h</div><div class="tm-k">Per week, flexible</div></div>
+    <div class="tm"><div class="tm-v br">€25/h</div><div class="tm-k">Top of market</div></div>
+    <div class="tm"><div class="tm-v">ASAP</div><div class="tm-k">Start</div></div>
+    <div class="tm"><div class="tm-v">Full-time</div><div class="tm-k">Possible, not promised</div></div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <div>
+      <div class="cta-t"><b>In?</b> Short intro. One project you're proud of. Weekly availability. <b>Show us what you've built — that's worth more than any CV.</b></div>
+      <div class="cta-m"><a href="mailto:johannes.nass@native-research.com?subject=Working%20Student%20AI%20%2F%20LLM%20%E2%80%94%20Application">johannes.nass@native-research.com</a></div>
+    </div>
+    <div class="cta-r">
+      <div class="cta-h">DM or Email</div>
+      <div class="cta-d">We reply within 48h</div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="ft">
+    <p>KEA · Native Research · Berlin · 2026</p>
+  </div>
+
+</div></div>
+</body>
+</html>
